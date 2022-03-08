@@ -1,6 +1,6 @@
 {
   "name": "@eyevinn/video-quality-monitor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "source": "index.ts",
   "main": "dist/index.js",
