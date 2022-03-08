@@ -26,7 +26,9 @@
     "@eyevinn/video-event-filter": "^1.1.5"
   },
   "devDependencies": {
+    "@parcel/packager-ts": "^2.3.2",
     "@parcel/transformer-typescript-tsc": "^2.3.2",
+    "@parcel/transformer-typescript-types": "^2.2.1",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
     "eslint": "^8.10.0",
