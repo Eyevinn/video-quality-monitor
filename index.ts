@@ -65,7 +65,7 @@ export class VideoQualityMonitor {
             this.watching();
             break;
           case PlayerEvents.TimeUpdate:
-            this.pullDroppedFrames();
+            this.onTimeUpdate();
             break;
         }
       })
@@ -99,7 +99,7 @@ export class VideoQualityMonitor {
     this.watchTimer && clearInterval(this.watchTimer);
   }
 
-  private pullDroppedFrames() {
+  private onTimeUpdate() {
     const watchedFrames =
       this.videoElement.getVideoPlaybackQuality().totalVideoFrames;
     const droppedFrames =
