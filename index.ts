@@ -104,11 +104,17 @@ export class VideoQualityMonitor {
       this.videoElement.getVideoPlaybackQuality().totalVideoFrames;
     const droppedFrames =
       this.videoElement.getVideoPlaybackQuality().droppedVideoFrames;
+    const droppedFramesRatio = droppedFrames / watchedFrames;
+
+    const bufferRatio =
+      this.state.bufferingDuration / this.state.watchedDuration;
+
 
     this.setState({
       watchedFrames,
       droppedFrames,
-      droppedFramesRatio: droppedFrames / watchedFrames,
+      droppedFramesRatio,
+      bufferRatio,
     });
   }
 
