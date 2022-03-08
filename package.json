@@ -1,5 +1,5 @@
 {
-  "name": "video-quality-monitor",
+  "name": "@eyevinn/video-quality-monitor",
   "version": "0.0.2",
   "description": "",
   "source": "index.ts",
