@@ -109,12 +109,19 @@ export class VideoQualityMonitor {
     const bufferRatio =
       this.state.bufferingDuration / this.state.watchedDuration;
 
+    const qualityPoints =
+      1 -
+      bufferRatio -
+      droppedFramesRatio -
+      (bufferRatio > 0.02 ? 0.3 : 0) -
+      (droppedFramesRatio > 0.02 ? 0.3 : 0);
 
     this.setState({
       watchedFrames,
       droppedFrames,
       droppedFramesRatio,
       bufferRatio,
+      qualityPoints,
     });
   }
 
